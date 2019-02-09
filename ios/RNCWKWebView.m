@@ -582,7 +582,7 @@ static NSString *const MessageHandlerName = @"ReactNativeWebView";
  * @see https://fburl.com/rtys6jlb
  */
 - (void)      webView:(WKWebView *)webView
-  didStartProvisionalNavigation:(WKNavigation *)navigation
+  didCommitNavigation:(WKNavigation *)navigation
 {
   if (_injectedJavaScript) {
     [self evaluateJS: _injectedJavaScript thenCall: ^(NSString *jsEvaluationValue) {
